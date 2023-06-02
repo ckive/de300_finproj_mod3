@@ -19,6 +19,10 @@ We mimicked our DAG based off of the example graph in the instructions. The only
 
 A note on running the DAG: On occasion the logistic regression and/or svm tasks will fail due to spark internal errors. Most of the time they will work but sometimes they won't. 
 
+## Model Selection
+After observing all models the best rocauc score achieved was 0.8756 by the merged data logistic regression.
+
+
 ### Merging Step
 A note on the merging step. We attempted to use the same code that worked for us in part 2 of this project to create smoke_source1 and smoke_source2 columns imputed based on the smoke column and the scraped smoking data. We do not know why the same code produces different results when running in airflow. We kept the merge task in but adjusted for this issue in the later lr and svm on the merged data. If we are able to solve this issue in the next itterration of the project we will be able to properly perform logistic regression and svm on the properly merged data.
 
