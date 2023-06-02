@@ -1,4 +1,4 @@
-# DataEng300 - EDA
+# DataEng300 - Module 3 Workflow Orchestration
 
 ## Requirements
 
