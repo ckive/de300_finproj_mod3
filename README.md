@@ -14,7 +14,7 @@ Create 2 buckets for the entire workflow. In this case, we have `de300-group11-m
 ## Tasks
 Building on top of previous modules, this step required scraping another data source https://wayback.archive-it.org/5774/20211119125806/https:/www.healthypeople.gov/2020/data-search/Search-the-Data?nid=5342 in addition to the previously scraped https://www.abs.gov.au/statistics/health/health-conditions-and-risks/smoking/2020-21 and https://www.cdc.gov/tobacco/data_statistics/fact_sheets/adult_data/cig_smoking/index.htm. We looked through all the data that was available and the data that was most applicable to this study were the data about the gender and age. From this new data source we were able to create another category of age group by taking the rate of smoking for adolecents in grades 9-12 (proxying ages 14-17) and considering the data.
 
-## AIRFLOW & DAG (todo: talk abit about how workflow was orchestrated with AIRFLOW and the DAG works)
+## AIRFLOW & DAG
 We mimicked our DAG based off of the example graph in the instructions. The only difference with ours is we do not have a load data task. This is because we are pulling and pushing various csv files in every single task so the load data task is unnecessary.
 
 A note on running the DAG: On occasion the logistic regression and/or svm tasks will fail due to spark internal errors. Most of the time they will work but sometimes they won't. 
